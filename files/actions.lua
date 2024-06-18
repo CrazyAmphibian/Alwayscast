@@ -43,6 +43,8 @@ replacespellfunction("ALPHA",function( recursion_level, iteration )
 				if data.mana<=mana then
 					mana=mana-data.mana
 					data.action(rec)
+				else
+					OnNotEnoughManaForAction()
 				end
 			end
 			
@@ -69,6 +71,8 @@ replacespellfunction("GAMMA",function( recursion_level, iteration )
 				if data.mana<=mana then
 					mana=mana-data.mana
 					data.action(rec)
+				else
+					OnNotEnoughManaForAction()
 				end
 			end
 			
@@ -109,6 +113,8 @@ replacespellfunction("TAU",function( recursion_level, iteration )
 				if data1.mana<=mana then
 					mana=mana-data1.mana
 					data1.action(rec)
+				else
+					OnNotEnoughManaForAction()
 				end
 			end
 			
@@ -117,6 +123,8 @@ replacespellfunction("TAU",function( recursion_level, iteration )
 				if data2.mana<=mana then
 					mana=mana-data2.mana
 					data2.action(rec)
+				else
+					OnNotEnoughManaForAction()
 				end
 			end
 			
@@ -135,6 +143,8 @@ replacespellfunction("OMEGA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -149,6 +159,8 @@ replacespellfunction("OMEGA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -163,6 +175,8 @@ replacespellfunction("OMEGA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -189,6 +203,8 @@ replacespellfunction("MU",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -203,6 +219,8 @@ replacespellfunction("MU",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -217,6 +235,8 @@ replacespellfunction("MU",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -246,6 +266,8 @@ replacespellfunction("PHI",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -260,6 +282,8 @@ replacespellfunction("PHI",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -274,6 +298,8 @@ replacespellfunction("PHI",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -302,6 +328,8 @@ replacespellfunction("SIGMA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -316,6 +344,8 @@ replacespellfunction("SIGMA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -330,6 +360,8 @@ replacespellfunction("SIGMA",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -395,6 +427,8 @@ replacespellfunction("ZETA",function( recursion_level, iteration )
 							if data.mana<=mana then
 								mana=mana-data.mana
 								data.action(rec)
+							else
+								OnNotEnoughManaForAction()
 							end
 							dont_draw_actions = false
 						end
@@ -427,6 +461,8 @@ replacespellfunction("OVERCAST_BETA",function( recursion_level, iteration )
 			if data.mana<=mana then
 				mana=mana-data.mana
 				data.action(rec)
+			else
+				OnNotEnoughManaForAction()
 			end
 		end
 		
@@ -451,6 +487,8 @@ replacespellfunction("EL_UPSILON",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -465,6 +503,8 @@ replacespellfunction("EL_UPSILON",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -479,6 +519,8 @@ replacespellfunction("EL_UPSILON",function( recursion_level, iteration )
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -516,6 +558,8 @@ replacespellfunction("ADD_TRIGGER",function()
 							if data.mana<=mana then
 								mana=mana-data.mana
 								data.action(rec)
+							else
+								OnNotEnoughManaForAction()
 							end
 							dont_draw_actions = false
 						end
@@ -563,6 +607,8 @@ replacespellfunction("ADD_TRIGGER",function()
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -590,6 +636,8 @@ replacespellfunction("ADD_TIMER",function()
 							if data.mana<=mana then
 								mana=mana-data.mana
 								data.action(rec)
+							else
+								OnNotEnoughManaForAction()
 							end
 							dont_draw_actions = false
 						end
@@ -637,6 +685,8 @@ replacespellfunction("ADD_TIMER",function()
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
@@ -664,6 +714,8 @@ replacespellfunction("ADD_DEATH_TRIGGER",function()
 							if data.mana<=mana then
 								mana=mana-data.mana
 								data.action(rec)
+							else
+								OnNotEnoughManaForAction()
 							end
 							dont_draw_actions = false
 						end
@@ -711,6 +763,8 @@ replacespellfunction("ADD_DEATH_TRIGGER",function()
 						if data.mana<=mana then
 							mana=mana-data.mana
 							data.action(rec)
+						else
+							OnNotEnoughManaForAction()
 						end
 						dont_draw_actions = false
 					end
