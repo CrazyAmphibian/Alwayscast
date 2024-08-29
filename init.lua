@@ -11,11 +11,13 @@ end
 function OnModInit()
 	print("Mod - OnModInit()") -- After that this is called for all mods
 end
-
+]]
 function OnModPostInit()
-	print("Mod - OnModPostInit()") -- Then this is called for all mods
+	--changes CoV to require you stand in it to receive its effect.
+	--want healing that follows you? use boomerang spell, nerd.
+	dofile("mods/Alwayscast/files/REGENERATION_FIELD_overwrite.lua")
 end
-
+--[[
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	GamePrint( "OnPlayerSpawned() - Player entity id: " .. tostring(player_entity) )
 end

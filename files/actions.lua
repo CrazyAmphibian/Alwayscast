@@ -7,6 +7,18 @@ for i=1,#actions do
 	end
 end
 end
+
+local function setspellattribute(spell_id,attribute,value)
+if not attribute then return end
+for i=1,#actions do
+	local spell=actions[i]
+	if spell.id==spell_id then
+		spell[attribute]=value
+		return i
+	end
+end
+end
+
 --adds 2 more instructions, how unfortunate.
 --[[
 MOVE
@@ -22,6 +34,7 @@ CALL
 ###############
 ]]
 
+setspellattribute("ALPHA","mana",30)
 replacespellfunction("ALPHA",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 15
 			
@@ -51,7 +64,7 @@ replacespellfunction("ALPHA",function( recursion_level, iteration )
 			--draw_actions( 1, true )
 		end)
 
-
+setspellattribute("GAMMA","mana",30)
 replacespellfunction("GAMMA",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 15
 			
@@ -81,7 +94,7 @@ replacespellfunction("GAMMA",function( recursion_level, iteration )
 
 
 
-
+setspellattribute("TAU","mana",75)
 replacespellfunction("TAU",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 35
 			
@@ -131,7 +144,7 @@ replacespellfunction("TAU",function( recursion_level, iteration )
 			--draw_actions( 1, true )
 		end)
 
-
+setspellattribute("OMEGA","mana",250)
 replacespellfunction("OMEGA",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 50
 			
@@ -185,7 +198,7 @@ replacespellfunction("OMEGA",function( recursion_level, iteration )
 		end)
 
 
-
+setspellattribute("MU","mana",100)
 replacespellfunction("MU",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 50
 			
@@ -250,7 +263,7 @@ replacespellfunction("MU",function( recursion_level, iteration )
 			draw_actions( 1, true )
 		end)
 		
-		
+setspellattribute("PHI","mana",100)	
 replacespellfunction("PHI",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 50
 			
@@ -312,7 +325,7 @@ replacespellfunction("PHI",function( recursion_level, iteration )
 		end)
 		
 		
-		
+setspellattribute("SIGMA","mana",100)			
 replacespellfunction("SIGMA",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 30
 			
@@ -375,6 +388,8 @@ replacespellfunction("SIGMA",function( recursion_level, iteration )
 			draw_actions( 1, true )
 		end)
 
+--honestly this shit still isn't worth using even when it's practically free
+setspellattribute("ZETA","mana",5)	
 replacespellfunction("ZETA",function( recursion_level, iteration )
 			local entity_id = GetUpdatedEntityID()
 			local x, y = EntityGetTransform( entity_id )
@@ -443,6 +458,7 @@ replacespellfunction("ZETA",function( recursion_level, iteration )
 
 
 --the cool thing about this function is that you don't even need to check for if a mod is loaded.
+setspellattribute("OVERCAST_BETA","mana",20)	
 replacespellfunction("OVERCAST_BETA",function( recursion_level, iteration )
 		c.fire_rate_wait = c.fire_rate_wait + 15
 		
@@ -471,7 +487,7 @@ replacespellfunction("OVERCAST_BETA",function( recursion_level, iteration )
 
 --i'm not going to TOUCH theta. have you seen the library it uses? holy fuck that is some shitcode if i've ever seen it.
 
-
+setspellattribute("EL_UPSILON","mana",80)	
 replacespellfunction("EL_UPSILON",function( recursion_level, iteration )
 			c.fire_rate_wait = c.fire_rate_wait + 50
 			
@@ -616,7 +632,7 @@ replacespellfunction("ADD_TRIGGER",function()
 			end
 		end)
 		
-		
+setspellattribute("ADD_TIMER","mana",10) --why do these cost more than trigger?		
 replacespellfunction("ADD_TIMER",function()
 			local data = {}
 			
@@ -694,7 +710,7 @@ replacespellfunction("ADD_TIMER",function()
 			end
 		end)
 		
-		
+setspellattribute("ADD_DEATH_TRIGGER","mana",10)
 replacespellfunction("ADD_DEATH_TRIGGER",function()
 			local data = {}
 			
@@ -771,3 +787,43 @@ replacespellfunction("ADD_DEATH_TRIGGER",function()
 				end
 			end
 		end)
+		
+setspellattribute("DIVIDE_2","mana",35)	-- y=15x+5	
+setspellattribute("DIVIDE_3","mana",50)		
+setspellattribute("DIVIDE_4","mana",65)		
+setspellattribute("DIVIDE_10","mana",155)		
+setspellattribute("DIVIDE_10","max_uses",-1)		
+		
+setspellattribute("BURST_X","max_uses",-1)
+setspellattribute("BURST_X","mana",40)
+setspellattribute("BURST_8","mana",25)
+
+
+
+
+setspellattribute("TRANSMUTATION","max_uses",-1) --why was this limited in the first place?
+
+
+setspellattribute("MATERIAL_BLOOD","max_uses",-1) --the odd one out, and for no real good reason, either.
+--data/scripts/gun/gun_actions.lua:3230 Note( Petri ): 10.7.2019 - this could be just removed (vampirism, the limited uses in these is extremely silly)
+
+setspellattribute("THUNDERBALL","max_uses",-1) --worse version of lightning bolt, let's be honest.
+
+setspellattribute("DEATH_CROSS_BIG","max_uses",-1) --i don't think this needs to be limited, seeing as it's already penalized with more recharge and mana cost. (not to mention a bigger radius isn't always better because collateral)
+
+setspellattribute("PIPE_BOMB","max_uses",-1) --these are a hassle to use because you need something else to detonate them.
+setspellattribute("PIPE_BOMB_DEATH_TRIGGER","max_uses",-1) --like, just use dormant crystal man.
+
+
+for _,v in ipairs({"A","B","C","D","E","F","GSHARP","A2"}) do
+setspellattribute("OCARINA_"..v,"mana",5)
+end
+for _,v in ipairs({"A","D","DIS","E","G"}) do
+setspellattribute("KANTELE_"..v,"mana",5)
+end
+
+
+
+
+
+
