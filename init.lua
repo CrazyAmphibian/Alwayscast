@@ -16,6 +16,9 @@ function OnModPostInit()
 	--changes CoV to require you stand in it to receive its effect.
 	--want healing that follows you? use boomerang spell, nerd.
 	dofile("mods/Alwayscast/files/REGENERATION_FIELD_overwrite.lua")
+	
+	ModTextFileSetContent("data/entities/projectiles/deck/healhurt.xml",ModTextFileGetContent("mods/Alwayscast/files/ANTIHEAL_overwrite.xml"))
+	
 end
 --[[
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
