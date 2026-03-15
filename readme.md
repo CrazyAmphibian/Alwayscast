@@ -4,6 +4,7 @@
 * makes some more spells unlimited
 * circle of vigor now requires you stand in it
 * tweaks the mana costs of some spells.
+* deadly heal now deals curse damage, but can hit you without modifiers
 
 ## Why?
 some spells are never used (looking at you, myriad spell), and some are too powerful for the game to have any expectation of balance (any greek spell)
